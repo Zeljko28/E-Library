@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="BIBLIOTEKA.MVVM.View.ManageStudentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BIBLIOTEKA.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="0 20 0 0">
+            <ListView 
+                          HorizontalAlignment="Left"
+                          HorizontalContentAlignment="Left"
+                          ScrollViewer.VerticalScrollBarVisibility="Visible"
+                          x:Name="ListViewControl"
+                          Height="250"
+                          Width="750" 
+                          Margin="10 , 10 ,0 , 10"
+               SelectionChanged="ListViewControl_SelectionChanged">
+
+                <ListView.Resources>
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding aktivan}" Value="da">
+                                <Setter Property="Background" Value="green" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding aktivan}" Value="ne">
+                                <Setter Property="Background" Value="red" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding aktivan}" Value="naCekanju">
+                                <Setter Property="Background" Value="Yellow" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.Resources>
+
+                <ListView.View >
+                    <GridView>
+                        <GridViewColumn Header="Korisnicko ime" Width="100" DisplayMemberBinding="{Binding korisnickoIme}" />
+                        <GridViewColumn Header="Ime " Width="100" DisplayMemberBinding="{Binding ime}" />
+                        <GridViewColumn Header="Prezime" Width="140" DisplayMemberBinding="{Binding prezime}" />
+                        <GridViewColumn Header="JMBG" Width="250" DisplayMemberBinding="{Binding JMBG}" />
+                    </GridView>
+                </ListView.View>
+
+            </ListView>
+
+            <StackPanel Orientation="Horizontal">
+                <Button
+                     Content="Aktiviraj"
+                     Margin="20,20,0,20"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Bottom"
+                     Width="200" 
+                     Grid.Row="1"
+                     Height="40"
+                     x:Name="ActivateButton"
+                     Background="ForestGreen" Click="ActivateButton_Click"
+                    
+                     />
+                <Button
+                     Content="Blokiraj"
+                     Margin="20,20,0,20"
+                     Background="Red"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Bottom"
+                     Width="200" 
+                     Grid.Row="1"
+                     Height="40"
+                     x:Name="BlockButton" Click="BlockButton_Click"
+                    
+                     
+                     />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

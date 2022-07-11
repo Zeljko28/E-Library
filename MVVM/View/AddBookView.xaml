@@ -1,0 +1,239 @@
+﻿<UserControl x:Class="BIBLIOTEKA.MVVM.View.AddBookView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BIBLIOTEKA.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border CornerRadius="10" Margin="0,5,0,-5">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#aac6ff"  Offset="0.0"/>
+                    <GradientStop Color="#3e62ab" Offset="1"/>
+
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <StackPanel Margin="0 5 0 0 ">
+            <TextBlock   Margin="280 10 0  0"
+                             Text="Odaberite vrstu dela: "
+                             FontSize="15"
+                             Foreground="White"
+                             FontFamily="Helvetica"
+                             />
+            <ComboBox 
+                      Width="250"
+                      Height="20"
+                      x:Name="typeComboBox"
+                      Margin="0, 5, 0, 10"
+                      SelectionChanged="comboBoxSelectionChange"
+                      />
+
+            <StackPanel  Orientation="Horizontal">
+                <TextBox 
+                         x:Name="ISBNText" 
+                         FontFamily="Helvetica"
+                         FontWeight="Light"
+                         x:Uid="ISBN"
+                         FontSize="20"
+                         HorizontalAlignment="Center" 
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="25"
+                         Margin="280,0,0,0"
+                         Style="{StaticResource ModernTextBox}"/>
+
+            </StackPanel>
+
+            <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+            <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBox 
+                         x:Name="NazivText" 
+                         FontFamily="Helvetica"
+                         FontWeight="Light"
+                         x:Uid="Naziv"
+                         FontSize="20"
+                         HorizontalAlignment="Center" 
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="25"
+                         Margin="280,0,0,0"
+                         Style="{StaticResource ModernTextBox}"/>
+
+            </StackPanel>
+            <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+            <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBox 
+                         x:Name="AutorText" 
+                         FontFamily="Helvetica"
+                         FontWeight="Light"
+                         x:Uid="Autor"
+                         FontSize="20"
+                         HorizontalAlignment="Center" 
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="25"
+                         Margin="280,0,0,0"
+                         Style="{StaticResource ModernTextBox}"/>
+
+            </StackPanel>
+            <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"
+                    />
+
+
+            <StackPanel  x:Name="panel" Orientation="Horizontal" Margin="0,-25,0,0">
+                <TextBox 
+                         x:Name="MentorText" 
+                         FontFamily="Helvetica"
+                         FontWeight="Light"
+                         x:Uid="Mentor"
+                         FontSize="20"
+                         HorizontalAlignment="Center" 
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="25"
+                         Margin="280,0,0,0"
+                         Style="{StaticResource ModernTextBox}"
+                         Visibility="Hidden"/>
+
+            </StackPanel>
+            <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"
+                    Visibility="Hidden"
+                    x:Name="borderMentor"/>
+
+            <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBox x:Name="datumIzdavanjaText" 
+                             
+                         FontFamily="Helvetica" 
+                         FontWeight="Light"
+                                 FontSize="20"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 Width="235"
+                                 HorizontalContentAlignment="Left"
+                                 Opacity="0.5"
+                                 Height="25"
+                         x:Uid="Datum Izdavanja"
+                         Margin="280,0,0,0"
+                         Style="{StaticResource ModernTextBox}"
+                         />
+            </StackPanel>
+            <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+            <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBox x:Name="IzdavacText" 
+                         FontFamily="Helvetica" 
+                         FontWeight="Light"
+                                 FontSize="20"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 Width="235"
+                                 HorizontalContentAlignment="Left"
+                                 Opacity="0.5"
+                                 Height="25"
+                         x:Uid="Izdavač"
+                         Margin="280,0,0,0"
+                         Style="{StaticResource ModernTextBox}"
+                         />
+            </StackPanel>
+            <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+            <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
+                <TextBox x:Name="brojDostupnihText" 
+                         FontFamily="Helvetica" 
+                         FontWeight="Light"
+                                 FontSize="20"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 Width="235"
+                                 HorizontalContentAlignment="Left"
+                                 Opacity="0.5"
+                                 Height="25"
+                         x:Uid="Broj dostupnih primeraka"
+                         Margin="280,0,0,0"
+                         Style="{StaticResource ModernTextBox}"
+                         />
+            </StackPanel>
+            <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+
+            <Button
+                     Content="Izaberi naslovnu stranu"
+                     Margin="275,20,0,20"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Bottom"
+                     Width="250" 
+                     Grid.Row="1"
+                     Height="30"
+                     x:Name="LoadImageButton"
+                     Click="LoadImage_Click"
+                     Visibility="Visible"
+                     
+                     />
+
+            <Button
+                     Content="Dodaj knjigu"
+                     Margin="580,-50,0,10"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Bottom"
+                     Width="200" 
+                     Grid.Row="1"
+                     Height="40"
+                     x:Name="AddLibrarianButton"
+                     Click="AddBook_Click"
+                     Visibility="Visible"
+                     
+                     />
+
+        </StackPanel>
+    </Grid>
+</UserControl>

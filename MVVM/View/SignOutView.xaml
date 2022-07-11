@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="BIBLIOTEKA.MVVM.View.SignOutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BIBLIOTEKA.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="400" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        
+        
+        <Border CornerRadius="10" Grid.RowSpan="2">
+            
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#aac6ff"  Offset="0.0"/>
+                    <GradientStop Color="#3e62ab" Offset="1"/>
+
+                </LinearGradientBrush>
+            </Border.Background>
+            
+        </Border>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+
+                <Label Content="Želiš da se odjaviš?" FontSize="35" Margin="20,90,0,0" FontFamily="Helvetica" />
+                <!--
+                <Button x:Uid="signOutButton" x:Name="signOutButton" Margin="60,0,0,0"
+                                Content="Odjavite se" Width="100"
+                                Height="35" ></Button> -->
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

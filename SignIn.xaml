@@ -1,0 +1,203 @@
+﻿<Window x:Class="BIBLIOTEKA.SignIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BIBLIOTEKA"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Height="450" Width="380" AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Border CornerRadius="10" Margin="0,5,0,-5">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#aac6ff"  Offset="0.0"/>
+                        <GradientStop Color="#3e62ab" Offset="1"/>
+
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+
+            <StackPanel Margin="0 10 0 0 ">
+                <StackPanel VerticalAlignment="Center" Margin="0 0 0 30">
+                    <Image Source="Images/book.png"
+                           Width="100" ></Image>
+
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal">
+                    <TextBox 
+                         x:Name="usernameText" 
+                         FontFamily="Helvetica"
+                         FontWeight="Light"
+                         x:Uid="Korisničko ime"
+                         FontSize="20"
+                         HorizontalAlignment="Center" 
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="25"
+                         Margin="63,0,0,0"
+                         Style="{StaticResource ModernTextBox}"/>
+                    <iconPacks:PackIconMaterial Kind="Account"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="#2a4c96"
+                                            Background="Transparent"
+                                            />
+                </StackPanel>
+
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+                <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
+                    <PasswordBox x:Name="passwordText" FontFamily="Helvetica"  FontWeight="Light"
+                         FontSize="20"
+                         x:Uid="Lozinka"
+                         HorizontalAlignment="Center" 
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="25"
+                         Margin="63,0,0,0"
+                             />
+                    <iconPacks:PackIconMaterial Kind="FormTextboxPassword"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="#2a4c96"
+                                            Background="Transparent"
+                                            />
+
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+                <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBox x:Name="nameText" 
+                             
+                         FontFamily="Helvetica" 
+                         FontWeight="Light"
+                                 FontSize="20"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 Width="235"
+                                 HorizontalContentAlignment="Left"
+                                 Opacity="0.5"
+                                 Height="25"
+                         x:Uid="Ime"
+                         Margin="63,0,0,0"
+                         Style="{StaticResource ModernTextBox}"
+                         />
+                    <iconPacks:PackIconMaterial Kind="OfficeBuilding"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="#2a4c96"
+                                            Background="Transparent"
+                                            />
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+                <StackPanel  Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBox x:Name="lastnameText" 
+                         FontFamily="Helvetica" 
+                         FontWeight="Light"
+                                 FontSize="20"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 Width="235"
+                                 HorizontalContentAlignment="Left"
+                                 Opacity="0.5"
+                                 Height="25"
+                         x:Uid="Prezime"
+                         Margin="63,0,0,0"
+                         Style="{StaticResource ModernTextBox}"
+                         />
+                    <iconPacks:PackIconMaterial Kind="AndroidMessages"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="#2a4c96"
+                                            Background="Transparent"
+                                            />
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+                <StackPanel  Orientation="Horizontal" Margin="0,20,0,0"/>
+
+                <StackPanel  Orientation="Horizontal" Margin="0,0,0,0">
+                    <TextBox x:Name="JMBGText" 
+                         FontFamily="Helvetica" 
+                         FontWeight="Light"
+                                 FontSize="20"
+                                 Foreground="White"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 Width="235"
+                                 HorizontalContentAlignment="Left"
+                                 Opacity="0.5"
+                                 Height="25"
+                         x:Uid="JMBG"
+                         Margin="63,0,0,0"
+                         Style="{StaticResource ModernTextBox}"
+                         />
+                    <iconPacks:PackIconMaterial Kind="AndroidMessages"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="#2a4c96"
+                                            Background="Transparent"
+                                            />
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+                <StackPanel  Orientation="Horizontal" Margin="0,20,0,0"/>
+
+
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15,0,0">
+                    <Button  x:Uid="confirmButton" x:Name="confirmButton" Content="Potvrdi" Width="100" Height="35" Click="Button_Click" RenderTransformOrigin="0.508,-0.58" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" Margin="0,0,50,0"/>
+                    <Button  x:Uid="cancelButton" x:Name="cancelButton" Content="Otkaži" Width="100" Height="35" Click="cancelButton_Click" RenderTransformOrigin="0.508,-0.58"/>
+                </StackPanel>
+            </StackPanel>
+
+
+
+        </Grid>
+
+    </Grid>
+</Window>
